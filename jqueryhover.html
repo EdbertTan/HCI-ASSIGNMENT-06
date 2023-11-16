@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Interactive Menu</title>
+<style>
+.hide {
+  display: none;
+}
+    
+.myDIV:hover + .hide {
+  display: block;
+  color: red;
+}
+</style>
+</head>
+<body>
+
+<h2>Menu</h2>
+<table>
+	<tr>
+	<td style="width:20%">
+		<div class="myDIV"><span><img  src="meatpizza1.jpg" style="max-width:100%;height:auto;"></span></div>
+		<div class="hide"><img  src="meatpizza2.jpg" style="max-width:200%;height:auto;"></div>
+	</td>
+	<td style="vertical-align:top">
+	<h1>Meat Lovers Pizza</h1>
+	<p>price: RP 100.000</p>
+	</td>
+	</tr>
+</table>
+
+<table>
+	<tr>
+	<td style="width:20%">
+		<div class="myDIV"><span><img  src="burgpizza1.jpg" style="max-width:100%;height:auto;"></span></div>
+		<div class="hide"><img  src="burgpizza2.jpg" style="max-width:200%;height:auto;"></div>
+	</td>
+	<td style="vertical-align:top">
+	<h1>Cheeseburger Pizza</h1>
+	<p>price: RP 100.000</p>
+	</td>
+	</tr>
+</table>
+</body>
+</html>
