@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multi Purpose Website</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#myTab a").each(function(index, element){
+        new bootstrap.Tab(element);
+    })
+
+    $("#myBtn").click(function(){
+        var lastTab = bootstrap.Tab.getInstance($("#myTab a:first")[0]);
+        console.log(lastTab);
+    });
+});
+$(document).ready(function(){
+
+    // Toggles paragraphs display
+    $("#button1").click(function(){
+        $("#naturea").toggle();
+		$("#natureb").toggle();
+		$("#naturec").toggle();
+        $("#monumenta").hide();
+		$("#monumentb").hide();
+		$("#monumentc").hide();
+        $("#animala").hide();
+		$("#animalb").hide();
+		$("#animalc").hide();
+    });
+
+	
+	
+});
+$(document).ready(function(){
+    // Toggles paragraphs display
+    $("#button2").click(function(){
+        $("#naturea").hide();
+		$("#natureb").hide();
+		$("#naturec").hide();
+        $("#animala").hide();
+		$("#animalb").hide();
+		$("#animalc").hide();
+        $("#monumenta").toggle();
+		$("#monumentb").toggle();
+		$("#monumentc").toggle();
+    });
+
+    $("#button3").click(function(){
+    });
+	
+});
+$(document).ready(function(){
+    // Toggles paragraphs display
+    $("#button3").click(function(){
+        $("#naturea").hide();
+		$("#natureb").hide();
+		$("#naturec").hide();
+        $("#monumenta").hide();
+		$("#monumentb").hide();
+		$("#monumentc").hide();
+        $("#animala").toggle();
+		$("#animalb").toggle();
+		$("#animalc").toggle();
+    });
+});
+</script>
+<style>
+	.newsid {
+		border:1px solid black;
+		border-spacing: 20px;
+		}
+
+.hide {
+  display: none;
+}
+    
+.myDIV:hover + .hide {
+  display: block;
+  color: red;
+}
+
+</style>
+</head>
+<body>
+<div class="m-4">
+    <ul class="nav nav-tabs" id="myTab">
+        <li class="nav-item">
+            <a href="#home" class="nav-link active" data-bs-toggle="tab">News</a>
+        </li>
+        <li class="nav-item">
+            <a href="#profile" class="nav-link" data-bs-toggle="tab">Gallery</a>
+        </li>
+        <li class="nav-item">
+            <a href="#messages" class="nav-link" data-bs-toggle="tab">Menu</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="home">
+            <h4 class="mt-2">News</h4>
+            <p id="newsid" style = "vertical-align: text-top;"><h1>China’s Xi Jinping arrives in US ahead of summit with Joe Biden</h1><br><img  src="news.webp" style="max-width:35%;height:auto;"></p>
+			</div>
+        <div class="tab-pane fade" id="profile">
+            <button type="button" class="toggle-btn" id="button1"><h1>Nature Images</h1></button> 
+	<button type="button" class="toggle-btn" id="button2"><h1>Monument Images</h1></button> 
+	<button type="button" class="toggle-btn" id="button3"><h1>Animal Images</h1></button> 
+
+    <p style ="display:none" id="naturea">
+	<img  src="nature1.jpg" style="max-width:20%;height:auto;">
+	<img  src="nature2.jpg" style="max-width:20%;height:auto;">
+	<img  src="nature3.jpeg" style="max-width:20%;height:auto;">
+	</p>
+	
+    <p style ="display:none" id="monumenta">
+	<img  src="monument1.jpeg" style="max-width:20%;height:auto;">
+	<img  src="monument2.jpg" style="max-width:20%;height:auto;">
+	<img  src="monument3.png" style="max-width:20%;height:auto;">
+	</p>
+	
+    <p style ="display:none" id="animala">
+	<img  src="animal1.jpg" style="max-width:20%;height:auto;">
+	<img  src="animal2.jpg" style="max-width:20%;height:auto;">
+	<img  src="animal3.jpg" style="max-width:20%;height:auto;">
+	</p>
+			</div>
+        <div class="tab-pane fade" id="messages">
+            <table>
+	<tr>
+	<td style="width:20%">
+		<div class="myDIV"><span><img  src="meatpizza1.jpg" style="max-width:100%;height:auto;"></span></div>
+		<div class="hide"><img  src="meatpizza2.jpg" style="max-width:200%;height:auto;"></div>
+	</td>
+	<td style="vertical-align:top">
+	<h1>Meat Lovers Pizza</h1>
+	<p>price: RP 100.000</p>
+	</td>
+	</tr>
+</table>
+
+<table>
+	<tr>
+	<td style="width:20%">
+		<div class="myDIV"><span><img  src="burgpizza1.jpg" style="max-width:100%;height:auto;"></span></div>
+		<div class="hide"><img  src="burgpizza2.jpg" style="max-width:200%;height:auto;"></div>
+	</td>
+	<td style="vertical-align:top">
+	<h1>Cheeseburger Pizza</h1>
+	<p>price: RP 100.000</p>
+	</td>
+	</tr>
+</table>
+			</div>
+    </div>
+  	<hr />
+</div>
+</body>
+</html>
